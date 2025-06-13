@@ -22,5 +22,5 @@ $ ./main
 
 
 # Whats languages its use?
-Python, C 
+Python, C, sh
 
