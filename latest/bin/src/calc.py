@@ -1,0 +1,1 @@
+eval(int(input("> ")))

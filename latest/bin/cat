@@ -1,0 +1,6 @@
+#!/bin/sh
+read -p "File for view> " f
+clear
+echo "=====$f====="
+cat ./home/local/$f
+echo "=====$f====="
