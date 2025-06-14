@@ -20,7 +20,7 @@ $ ./main
 
 
 # Whats languages its use?
-Python, C 
+Python, C, sh
 
 
 # Release 1.1 
