@@ -1,0 +1,2 @@
+get_network=$(cat ./etc/.netconfig)
+echo "Network: $get_network"
