@@ -5,7 +5,7 @@ import time
 import os
 
 def print_help():
-    print("gpm - A sample package manager\n")
+    print("gpm - A simple package manager\n")
     print("Usage:")
     print("  gpm <command> [<args>]\n")
     print("Available commands:")
