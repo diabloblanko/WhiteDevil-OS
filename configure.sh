@@ -7,11 +7,69 @@ gethelp() {
         "no-fetch        :: Build without fetch\n"
         "no-pyutils      :: Build without pyutils extension. Clear and calc will be missing.\n")
 }
-no-devkit() {
-    BP="./usr/src/baseutils"
-    BPY="./usr/src/py"
-    DD="./bin"
+all() {
+    PF="./usr/src/fetch"
+    PD="./usr/src/development-kit"
+    BP="./usr/src/baseutils" # path to baseutils
+    BPY="./usr/src/py" # path to pyutils
+    PGPM="./usr/src/gpm"
+    DD="./bin" # destination dir
     cp $BP/cat.sh $DD/cat
+    cp $BP/chhost.sh $DD/chhost
+    cp $BP/edit.sh $DD/edit
+    cp $BP/ls.sh $DD/ls
+    cp $BP/touch.sh $DD/touch
+    echo "Baseutils installed."
+    cp $BPY/clear.py $DD/clear
+    cp $BPY/calc.py $DD
+    echo "Pyutils installed."
+    cp $PGPM/gpm.py $DD/gpm
+    echo "GPM installed"
+    bash $PD/osinfo
+    echo "Devkit builded sucssesfully"
+    bash $PF/configure.sh
+    tcc $PF/fetch.c -o $DD/fetch
+    echo "Fetch installed sucsessfully."
+}
+no-devkit() {
+    BP="./usr/src/baseutils" # path to baseutils
+    BPY="./usr/src/py" # path to pyutils
+    PGPM="./usr/src/gpm"
+    DD="./bin" # destination dir
+    cp $BP/cat.sh $DD/cat
+    cp $BP/chhost.sh $DD/chhost
+    cp $BP/edit.sh $DD/edit
+    cp $BP/ls.sh $DD/ls
+    cp $BP/touch.sh $DD/touch
+    echo "Baseutils installed."
+    cp $BPY/clear.py $DD/clear
+    cp $BPY/calc.py $DD
+    echo "Pyutils installed."
+    cp $PGPM/gpm.py $DD/gpm
+    echo "GPM installed"
+    echo "Everything installed succsesfully."
+}
+no-fetch() {
+    PD="./usr/src/development-kit"
+    BP="./usr/src/baseutils" # path to baseutils
+    BPY="./usr/src/py" # path to pyutils
+    PGPM="./usr/src/gpm"
+    DD="./bin" # destination dir
+    cp $BP/cat.sh $DD/cat
+    cp $BP/chhost.sh $DD/chhost
+    cp $BP/edit.sh $DD/edit
+    cp $BP/ls.sh $DD/ls
+    cp $BP/touch.sh $DD/touch
+    echo "Baseutils installed."
+    cp $BPY/clear.py $DD/clear
+    cp $BPY/calc.py $DD
+    echo "Pyutils installed."
+    cp $PGPM/gpm.py $DD/gpm
+    echo "GPM installed"
+    bash $PD/osinfo
+    echo "Devkit builded sucssesfully"
+    echo "Everything installed sucssesfully."
+}
 }
 for i in "$@"; do
   case $i in
