@@ -1,0 +1,8 @@
+#!/bin/bash
+OSNAME="WhiteDevilOS"
+KERNEL_NAME="WhiteDevilKernel"
+KERNEL_VER="WDKv1"
+PRETTY_NAME="WhiteDevil-OS"
+HOME_PAGE="github.com/diabloblanko/whitedevil-os"
+ISSUES="github.com/diabloblanko/whitedevil-os/issues"
+PYV=$pyversion

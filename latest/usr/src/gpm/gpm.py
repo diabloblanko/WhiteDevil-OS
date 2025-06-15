@@ -36,7 +36,7 @@ def main():
         print(f"Installing package '{package}' by author '{author}'...")
         # time.sleep(1) #WTH? 
         print("Working with git and github...")
-        os.system(f'cd ./home/local && git clone https://github.com/{author}/{package}.git')
+        os.system(f' git clone https://github.com/{author}/{package}.git ./home/local')
         os.system(f'cp ./bin/{package}/* ./bin/')
         os.system('chmod 775 ./bin/*')
     else:

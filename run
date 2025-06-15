@@ -1,8 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 get_hostname=$(cat ./etc/hostname)
 get_admin=$(cat ./etc/admin)
 get_shellprompt=$(cat ./etc/shellprompt)
 cat ./etc/welcome # Like /etc/motd in *NIX
+export wdos-py-version=$(python --version)
 while [ true ]; do
     read -p "$get_hostname:[$get_admin]$get_shellprompt " cmd
     ./bin/$cmd
