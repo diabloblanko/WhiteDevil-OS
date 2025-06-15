@@ -1,27 +1,26 @@
+# WARNING: NON-USABLE STATE!!!!!!
+# WhiteDevilOS 1.1
 # Gib Kernel & OS (shell)
-What is it? - its a mini os, but you cant run it in your pc from usb/efi.
-
-You can just run it from anything terminal:
-   sh, bash, fish, kitty, konsole, alacritty and more.
-
-
-# How to build it and run?
-First step: adding root to apps
+## What is that??
+Thats Virtual OS, forked from github.com/maldidev/gib-os that you cant run on your PC without other OS in middle
+## How to build it and run?
+## Dependencies:
+* Python 3*
+* C compiler
+* Shell interpreter(BASH)
+## If you use Linux
+### Give yourself acsses to run progs from ./bin/
 ```bash
-$ chmod +X ./bin/*
+chmod +d ./bin/*
 ```
-do not worry, apps are already compiled.
-
-Second step: Final: Running
+### And run!
 ```bash
-$ chmod +X main
-$ ./main
+$ chmod +x run
+$ ./run
 ```
+## If you use other OS
 
-
-# Whats languages its use?
-Python, C, sh
-
-
-# Release 1.1 
-New bash commands and package manager (gpm)
+```
+chmod +x build.sh
+```
+## What's the difference?

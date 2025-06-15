@@ -5,13 +5,13 @@ import time
 import os
 
 def print_help():
-    print("gpm - A sample package manager\n")
+    print("gpm - A simple package manager from Gip-OS.\n")
     print("Usage:")
     print("  gpm <command> [<args>]\n")
     print("Available commands:")
-    print("  install <author>.<package>    Install a package\n")
+    print("  install <publisher.package>    Install a package from GitHub\n")
     print("Options:")
-    print("  --help                        Show this help message and exit")
+    print("  --help                         Show this help message and exit")
 
 def main():
     parser = argparse.ArgumentParser(add_help=False)
@@ -30,13 +30,13 @@ def main():
             print("Error: 'install' requires <author>.<package>")
             sys.exit(1)
         if '.' not in args.arg:
-            print("Error: package name must be in format <author>.<package>")
+            print("Error: package name must be in format publisher.package")
             sys.exit(1)
         author, package = args.arg.split('.', 1)
         print(f"Installing package '{package}' by author '{author}'...")
-        time.sleep(1)
+        # time.sleep(1) #WTH? 
         print("Working with git and github...")
-        os.system(f'cd ./bin && git clone https://github.com/{author}/{package}.git')
+        os.system(f'cd ./home/local && git clone https://github.com/{author}/{package}.git')
         os.system(f'cp ./bin/{package}/* ./bin/')
         os.system('chmod 775 ./bin/*')
     else:
