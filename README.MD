@@ -1,6 +1,5 @@
 # WARNING: NON-USABLE STATE!!!!!!
 # WhiteDevilOS 1
-# Gib Kernel & OS (shell)
 ## What is that??
 Thats Virtual OS, forked from github.com/maldidev/gib-os that you cant run on your PC without other OS in middle
 ## How to build it and run?
